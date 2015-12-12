@@ -1,0 +1,739 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45B81D2A6C918269F958F996 /* Pods_Flower_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E841610318E3534FA5748B07 /* Pods_Flower_Example.framework */; };
+		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
+		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
+		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
+		6003F59E195388D20070C39A /* FlowerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* FlowerAppDelegate.m */; };
+		6003F5A7195388D20070C39A /* FlowerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* FlowerViewController.m */; };
+		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
+		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
+		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
+		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		9145CFC7B932E8B1B8525E74 /* Pods_Flower_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62838318BA4B83E33EF68C5 /* Pods_Flower_Tests.framework */; };
+		CEC2883E1C1A75D20012F876 /* TaskEight.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2882B1C1A75D20012F876 /* TaskEight.m */; };
+		CEC2883F1C1A75D20012F876 /* TaskFive.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2882D1C1A75D20012F876 /* TaskFive.m */; };
+		CEC288401C1A75D20012F876 /* TaskFour.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2882F1C1A75D20012F876 /* TaskFour.m */; };
+		CEC288411C1A75D20012F876 /* TaskNine.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC288311C1A75D20012F876 /* TaskNine.m */; };
+		CEC288421C1A75D20012F876 /* TaskOne.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC288331C1A75D20012F876 /* TaskOne.m */; };
+		CEC288431C1A75D20012F876 /* TaskSeven.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC288351C1A75D20012F876 /* TaskSeven.m */; };
+		CEC288441C1A75D20012F876 /* TaskSix.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC288371C1A75D20012F876 /* TaskSix.m */; };
+		CEC288451C1A75D20012F876 /* TaskTen.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC288391C1A75D20012F876 /* TaskTen.m */; };
+		CEC288461C1A75D20012F876 /* TaskThree.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2883B1C1A75D20012F876 /* TaskThree.m */; };
+		CEC288471C1A75D20012F876 /* TaskTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2883D1C1A75D20012F876 /* TaskTwo.m */; };
+		CEC2884C1C1A75DD0012F876 /* FlowerProcessDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC288491C1A75DD0012F876 /* FlowerProcessDelegate.m */; };
+		CEC2884D1C1A75DD0012F876 /* FlowerTester.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2884B1C1A75DD0012F876 /* FlowerTester.m */; };
+		CEC288581C1ABA670012F876 /* ProcessOne.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC288551C1ABA670012F876 /* ProcessOne.m */; };
+		CEC288591C1ABA670012F876 /* ProcessTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC288571C1ABA670012F876 /* ProcessTwo.m */; };
+		CEC2885E1C1ABA740012F876 /* ProcessOneSeed.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2885B1C1ABA740012F876 /* ProcessOneSeed.m */; };
+		CEC2885F1C1ABA740012F876 /* ProcessTwoSeed.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2885D1C1ABA740012F876 /* ProcessTwoSeed.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteInfo = Flower;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1515AB0EAB851F272D44DB87 /* Pods-Flower_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flower_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flower_Example/Pods-Flower_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		4AEDB09466DDFFFF581C8E65 /* Pods-Flower_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flower_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flower_Example/Pods-Flower_Example.release.xcconfig"; sourceTree = "<group>"; };
+		6003F58A195388D20070C39A /* Flower_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flower_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6003F595195388D20070C39A /* Flower-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Flower-Info.plist"; sourceTree = "<group>"; };
+		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6003F59B195388D20070C39A /* Flower-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Flower-Prefix.pch"; sourceTree = "<group>"; };
+		6003F59C195388D20070C39A /* FlowerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowerAppDelegate.h; sourceTree = "<group>"; };
+		6003F59D195388D20070C39A /* FlowerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlowerAppDelegate.m; sourceTree = "<group>"; };
+		6003F5A5195388D20070C39A /* FlowerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowerViewController.h; sourceTree = "<group>"; };
+		6003F5A6195388D20070C39A /* FlowerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlowerViewController.m; sourceTree = "<group>"; };
+		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6003F5AE195388D20070C39A /* Flower_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Flower_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		6EFB8C3BC378AF3B49078FCC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		767906BDAD601254ED9275CC /* Pods-Flower_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flower_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flower_Tests/Pods-Flower_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8E9A6A39BD89F8388D7AD2C4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		CCE2569C854BCE7EB5AB6A78 /* Flower.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Flower.podspec; path = ../Flower.podspec; sourceTree = "<group>"; };
+		CE644C557FD58389B5CFD773 /* Pods-Flower_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flower_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flower_Tests/Pods-Flower_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		CEC2882A1C1A75D20012F876 /* TaskEight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskEight.h; sourceTree = "<group>"; };
+		CEC2882B1C1A75D20012F876 /* TaskEight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskEight.m; sourceTree = "<group>"; };
+		CEC2882C1C1A75D20012F876 /* TaskFive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskFive.h; sourceTree = "<group>"; };
+		CEC2882D1C1A75D20012F876 /* TaskFive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskFive.m; sourceTree = "<group>"; };
+		CEC2882E1C1A75D20012F876 /* TaskFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskFour.h; sourceTree = "<group>"; };
+		CEC2882F1C1A75D20012F876 /* TaskFour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskFour.m; sourceTree = "<group>"; };
+		CEC288301C1A75D20012F876 /* TaskNine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskNine.h; sourceTree = "<group>"; };
+		CEC288311C1A75D20012F876 /* TaskNine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskNine.m; sourceTree = "<group>"; };
+		CEC288321C1A75D20012F876 /* TaskOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskOne.h; sourceTree = "<group>"; };
+		CEC288331C1A75D20012F876 /* TaskOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskOne.m; sourceTree = "<group>"; };
+		CEC288341C1A75D20012F876 /* TaskSeven.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskSeven.h; sourceTree = "<group>"; };
+		CEC288351C1A75D20012F876 /* TaskSeven.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskSeven.m; sourceTree = "<group>"; };
+		CEC288361C1A75D20012F876 /* TaskSix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskSix.h; sourceTree = "<group>"; };
+		CEC288371C1A75D20012F876 /* TaskSix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskSix.m; sourceTree = "<group>"; };
+		CEC288381C1A75D20012F876 /* TaskTen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTen.h; sourceTree = "<group>"; };
+		CEC288391C1A75D20012F876 /* TaskTen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTen.m; sourceTree = "<group>"; };
+		CEC2883A1C1A75D20012F876 /* TaskThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskThree.h; sourceTree = "<group>"; };
+		CEC2883B1C1A75D20012F876 /* TaskThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskThree.m; sourceTree = "<group>"; };
+		CEC2883C1C1A75D20012F876 /* TaskTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTwo.h; sourceTree = "<group>"; };
+		CEC2883D1C1A75D20012F876 /* TaskTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTwo.m; sourceTree = "<group>"; };
+		CEC288481C1A75DD0012F876 /* FlowerProcessDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowerProcessDelegate.h; sourceTree = "<group>"; };
+		CEC288491C1A75DD0012F876 /* FlowerProcessDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowerProcessDelegate.m; sourceTree = "<group>"; };
+		CEC2884A1C1A75DD0012F876 /* FlowerTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowerTester.h; sourceTree = "<group>"; };
+		CEC2884B1C1A75DD0012F876 /* FlowerTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowerTester.m; sourceTree = "<group>"; };
+		CEC288541C1ABA670012F876 /* ProcessOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessOne.h; sourceTree = "<group>"; };
+		CEC288551C1ABA670012F876 /* ProcessOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessOne.m; sourceTree = "<group>"; };
+		CEC288561C1ABA670012F876 /* ProcessTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessTwo.h; sourceTree = "<group>"; };
+		CEC288571C1ABA670012F876 /* ProcessTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessTwo.m; sourceTree = "<group>"; };
+		CEC2885A1C1ABA740012F876 /* ProcessOneSeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessOneSeed.h; sourceTree = "<group>"; };
+		CEC2885B1C1ABA740012F876 /* ProcessOneSeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessOneSeed.m; sourceTree = "<group>"; };
+		CEC2885C1C1ABA740012F876 /* ProcessTwoSeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessTwoSeed.h; sourceTree = "<group>"; };
+		CEC2885D1C1ABA740012F876 /* ProcessTwoSeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessTwoSeed.m; sourceTree = "<group>"; };
+		D62838318BA4B83E33EF68C5 /* Pods_Flower_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flower_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E841610318E3534FA5748B07 /* Pods_Flower_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flower_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6003F587195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				45B81D2A6C918269F958F996 /* Pods_Flower_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AB195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
+				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
+				9145CFC7B932E8B1B8525E74 /* Pods_Flower_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2194DFEA70657E8EFCF70489 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1515AB0EAB851F272D44DB87 /* Pods-Flower_Example.debug.xcconfig */,
+				4AEDB09466DDFFFF581C8E65 /* Pods-Flower_Example.release.xcconfig */,
+				767906BDAD601254ED9275CC /* Pods-Flower_Tests.debug.xcconfig */,
+				CE644C557FD58389B5CFD773 /* Pods-Flower_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6003F581195388D10070C39A = {
+			isa = PBXGroup;
+			children = (
+				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
+				6003F593195388D20070C39A /* Example for Flower */,
+				6003F5B5195388D20070C39A /* Tests */,
+				6003F58C195388D20070C39A /* Frameworks */,
+				6003F58B195388D20070C39A /* Products */,
+				2194DFEA70657E8EFCF70489 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6003F58B195388D20070C39A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58A195388D20070C39A /* Flower_Example.app */,
+				6003F5AE195388D20070C39A /* Flower_Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6003F58C195388D20070C39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58D195388D20070C39A /* Foundation.framework */,
+				6003F58F195388D20070C39A /* CoreGraphics.framework */,
+				6003F591195388D20070C39A /* UIKit.framework */,
+				6003F5AF195388D20070C39A /* XCTest.framework */,
+				E841610318E3534FA5748B07 /* Pods_Flower_Example.framework */,
+				D62838318BA4B83E33EF68C5 /* Pods_Flower_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6003F593195388D20070C39A /* Example for Flower */ = {
+			isa = PBXGroup;
+			children = (
+				CEC288531C1ABA550012F876 /* Seeds */,
+				CEC288521C1ABA4F0012F876 /* Processes */,
+				CEC288291C1A75BB0012F876 /* Tasks */,
+				CEC288481C1A75DD0012F876 /* FlowerProcessDelegate.h */,
+				CEC288491C1A75DD0012F876 /* FlowerProcessDelegate.m */,
+				CEC2884A1C1A75DD0012F876 /* FlowerTester.h */,
+				CEC2884B1C1A75DD0012F876 /* FlowerTester.m */,
+				6003F59C195388D20070C39A /* FlowerAppDelegate.h */,
+				6003F59D195388D20070C39A /* FlowerAppDelegate.m */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				6003F5A5195388D20070C39A /* FlowerViewController.h */,
+				6003F5A6195388D20070C39A /* FlowerViewController.m */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				6003F594195388D20070C39A /* Supporting Files */,
+			);
+			name = "Example for Flower";
+			path = Flower;
+			sourceTree = "<group>";
+		};
+		6003F594195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F595195388D20070C39A /* Flower-Info.plist */,
+				6003F596195388D20070C39A /* InfoPlist.strings */,
+				6003F599195388D20070C39A /* main.m */,
+				6003F59B195388D20070C39A /* Flower-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6003F5B5195388D20070C39A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5BB195388D20070C39A /* Tests.m */,
+				6003F5B6195388D20070C39A /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		6003F5B6195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5B7195388D20070C39A /* Tests-Info.plist */,
+				6003F5B8195388D20070C39A /* InfoPlist.strings */,
+				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				CCE2569C854BCE7EB5AB6A78 /* Flower.podspec */,
+				8E9A6A39BD89F8388D7AD2C4 /* README.md */,
+				6EFB8C3BC378AF3B49078FCC /* LICENSE */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		CEC288291C1A75BB0012F876 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				CEC2882A1C1A75D20012F876 /* TaskEight.h */,
+				CEC2882B1C1A75D20012F876 /* TaskEight.m */,
+				CEC2882C1C1A75D20012F876 /* TaskFive.h */,
+				CEC2882D1C1A75D20012F876 /* TaskFive.m */,
+				CEC2882E1C1A75D20012F876 /* TaskFour.h */,
+				CEC2882F1C1A75D20012F876 /* TaskFour.m */,
+				CEC288301C1A75D20012F876 /* TaskNine.h */,
+				CEC288311C1A75D20012F876 /* TaskNine.m */,
+				CEC288321C1A75D20012F876 /* TaskOne.h */,
+				CEC288331C1A75D20012F876 /* TaskOne.m */,
+				CEC288341C1A75D20012F876 /* TaskSeven.h */,
+				CEC288351C1A75D20012F876 /* TaskSeven.m */,
+				CEC288361C1A75D20012F876 /* TaskSix.h */,
+				CEC288371C1A75D20012F876 /* TaskSix.m */,
+				CEC288381C1A75D20012F876 /* TaskTen.h */,
+				CEC288391C1A75D20012F876 /* TaskTen.m */,
+				CEC2883A1C1A75D20012F876 /* TaskThree.h */,
+				CEC2883B1C1A75D20012F876 /* TaskThree.m */,
+				CEC2883C1C1A75D20012F876 /* TaskTwo.h */,
+				CEC2883D1C1A75D20012F876 /* TaskTwo.m */,
+			);
+			name = Tasks;
+			sourceTree = "<group>";
+		};
+		CEC288521C1ABA4F0012F876 /* Processes */ = {
+			isa = PBXGroup;
+			children = (
+				CEC288541C1ABA670012F876 /* ProcessOne.h */,
+				CEC288551C1ABA670012F876 /* ProcessOne.m */,
+				CEC288561C1ABA670012F876 /* ProcessTwo.h */,
+				CEC288571C1ABA670012F876 /* ProcessTwo.m */,
+			);
+			name = Processes;
+			sourceTree = "<group>";
+		};
+		CEC288531C1ABA550012F876 /* Seeds */ = {
+			isa = PBXGroup;
+			children = (
+				CEC2885A1C1ABA740012F876 /* ProcessOneSeed.h */,
+				CEC2885B1C1ABA740012F876 /* ProcessOneSeed.m */,
+				CEC2885C1C1ABA740012F876 /* ProcessTwoSeed.h */,
+				CEC2885D1C1ABA740012F876 /* ProcessTwoSeed.m */,
+			);
+			name = Seeds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6003F589195388D20070C39A /* Flower_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "Flower_Example" */;
+			buildPhases = (
+				3D19B1CEDDFF254E88262F5C /* Check Pods Manifest.lock */,
+				6003F586195388D20070C39A /* Sources */,
+				6003F587195388D20070C39A /* Frameworks */,
+				6003F588195388D20070C39A /* Resources */,
+				E92B6D7879A989CA72ED2796 /* Embed Pods Frameworks */,
+				176FB92531A20A0A8E1522D6 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Flower_Example;
+			productName = Flower;
+			productReference = 6003F58A195388D20070C39A /* Flower_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6003F5AD195388D20070C39A /* Flower_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "Flower_Tests" */;
+			buildPhases = (
+				3A3F0365C7D6DE50A7B860E7 /* Check Pods Manifest.lock */,
+				6003F5AA195388D20070C39A /* Sources */,
+				6003F5AB195388D20070C39A /* Frameworks */,
+				6003F5AC195388D20070C39A /* Resources */,
+				BD0F2643B07489D995F67842 /* Embed Pods Frameworks */,
+				E8152126EDFB8C39A5C8EB84 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6003F5B4195388D20070C39A /* PBXTargetDependency */,
+			);
+			name = Flower_Tests;
+			productName = FlowerTests;
+			productReference = 6003F5AE195388D20070C39A /* Flower_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6003F582195388D10070C39A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Flower;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Nir Ninio";
+				TargetAttributes = {
+					6003F5AD195388D20070C39A = {
+						TestTargetID = 6003F589195388D20070C39A;
+					};
+				};
+			};
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "Flower" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6003F581195388D10070C39A;
+			productRefGroup = 6003F58B195388D20070C39A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6003F589195388D20070C39A /* Flower_Example */,
+				6003F5AD195388D20070C39A /* Flower_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6003F588195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AC195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		176FB92531A20A0A8E1522D6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flower_Example/Pods-Flower_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A3F0365C7D6DE50A7B860E7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3D19B1CEDDFF254E88262F5C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BD0F2643B07489D995F67842 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flower_Tests/Pods-Flower_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8152126EDFB8C39A5C8EB84 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flower_Tests/Pods-Flower_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E92B6D7879A989CA72ED2796 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flower_Example/Pods-Flower_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6003F586195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F59E195388D20070C39A /* FlowerAppDelegate.m in Sources */,
+				CEC2884C1C1A75DD0012F876 /* FlowerProcessDelegate.m in Sources */,
+				CEC2885F1C1ABA740012F876 /* ProcessTwoSeed.m in Sources */,
+				CEC288591C1ABA670012F876 /* ProcessTwo.m in Sources */,
+				CEC288421C1A75D20012F876 /* TaskOne.m in Sources */,
+				CEC288431C1A75D20012F876 /* TaskSeven.m in Sources */,
+				CEC2884D1C1A75DD0012F876 /* FlowerTester.m in Sources */,
+				CEC288441C1A75D20012F876 /* TaskSix.m in Sources */,
+				6003F5A7195388D20070C39A /* FlowerViewController.m in Sources */,
+				CEC288461C1A75D20012F876 /* TaskThree.m in Sources */,
+				CEC2885E1C1ABA740012F876 /* ProcessOneSeed.m in Sources */,
+				CEC288581C1ABA670012F876 /* ProcessOne.m in Sources */,
+				CEC288411C1A75D20012F876 /* TaskNine.m in Sources */,
+				CEC288401C1A75D20012F876 /* TaskFour.m in Sources */,
+				CEC2883F1C1A75D20012F876 /* TaskFive.m in Sources */,
+				CEC288451C1A75D20012F876 /* TaskTen.m in Sources */,
+				CEC2883E1C1A75D20012F876 /* TaskEight.m in Sources */,
+				6003F59A195388D20070C39A /* main.m in Sources */,
+				CEC288471C1A75D20012F876 /* TaskTwo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AA195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6003F589195388D20070C39A /* Flower_Example */;
+			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6003F596195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F597195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F5B9195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6003F5BD195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6003F5BE195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6003F5C0195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1515AB0EAB851F272D44DB87 /* Pods-Flower_Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Flower/Flower-Prefix.pch";
+				INFOPLIST_FILE = "Flower/Flower-Info.plist";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6003F5C1195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AEDB09466DDFFFF581C8E65 /* Pods-Flower_Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Flower/Flower-Prefix.pch";
+				INFOPLIST_FILE = "Flower/Flower-Info.plist";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6003F5C3195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 767906BDAD601254ED9275CC /* Pods-Flower_Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flower_Example.app/Flower_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6003F5C4195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE644C557FD58389B5CFD773 /* Pods-Flower_Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flower_Example.app/Flower_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "Flower" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5BD195388D20070C39A /* Debug */,
+				6003F5BE195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "Flower_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C0195388D20070C39A /* Debug */,
+				6003F5C1195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "Flower_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C3195388D20070C39A /* Debug */,
+				6003F5C4195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6003F582195388D10070C39A /* Project object */;
+}
