@@ -26,7 +26,7 @@ s.description      = <<-DESC
   s.license          = 'MIT'
   s.author           = { "Nir Ninio" => "nir@vod.io" }
   s.source           = { :git => "https://github.com/vodio-labs/flower-ios.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/vodioapp'
+  # s.social_media_url = 'https://twitter.com/craveapps'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true

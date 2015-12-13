@@ -33,6 +33,7 @@
     [self addProcessOf:[ProcessOne class] withSeed:seed.oneSeed progressVolume:0.2];
     [self addTaskOf:[TaskFive class] withSeed:seed progressVolume:0.1];
     
+    // make sure no Nil is inserted to the array, otherwise it will crash
     [self addParallelWithTasks:
      @[[self parallelTaskOf:[TaskSix class] withSeed:seed progressVolume:0.1],
        [self parallelProcessOf:[ProcessOne class] withSeed:seed.parallerOneSeed progressVolume:0.2],

@@ -23,6 +23,18 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9145CFC7B932E8B1B8525E74 /* Pods_Flower_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62838318BA4B83E33EF68C5 /* Pods_Flower_Tests.framework */; };
+		CE47B45A1C1D377D00E2C738 /* TestProcessOne.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47B4591C1D377D00E2C738 /* TestProcessOne.m */; };
+		CE47B45B1C1D377D00E2C738 /* TestProcessOne.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47B4591C1D377D00E2C738 /* TestProcessOne.m */; };
+		CE47B45F1C1D37AB00E2C738 /* TestTaskOne.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47B45E1C1D37AB00E2C738 /* TestTaskOne.m */; };
+		CE47B4601C1D37AB00E2C738 /* TestTaskOne.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47B45E1C1D37AB00E2C738 /* TestTaskOne.m */; };
+		CE47B4641C1D37BF00E2C738 /* TestTaskTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47B4631C1D37BF00E2C738 /* TestTaskTwo.m */; };
+		CE47B4651C1D37BF00E2C738 /* TestTaskTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47B4631C1D37BF00E2C738 /* TestTaskTwo.m */; };
+		CE47B4691C1D381400E2C738 /* TestSeedOne.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47B4681C1D381400E2C738 /* TestSeedOne.m */; };
+		CE47B46A1C1D381400E2C738 /* TestSeedOne.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47B4681C1D381400E2C738 /* TestSeedOne.m */; };
+		CE47B46E1C1D39CD00E2C738 /* TestDataSeed.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47B46D1C1D39CD00E2C738 /* TestDataSeed.m */; };
+		CE47B46F1C1D39CD00E2C738 /* TestDataSeed.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47B46D1C1D39CD00E2C738 /* TestDataSeed.m */; };
+		CE47B4721C1D47C800E2C738 /* FlowerProcessListener.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47B4711C1D47C800E2C738 /* FlowerProcessListener.m */; };
+		CE47B4731C1D47C800E2C738 /* FlowerProcessListener.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47B4711C1D47C800E2C738 /* FlowerProcessListener.m */; };
 		CEC2883E1C1A75D20012F876 /* TaskEight.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2882B1C1A75D20012F876 /* TaskEight.m */; };
 		CEC2883F1C1A75D20012F876 /* TaskFive.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2882D1C1A75D20012F876 /* TaskFive.m */; };
 		CEC288401C1A75D20012F876 /* TaskFour.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2882F1C1A75D20012F876 /* TaskFour.m */; };
@@ -33,8 +45,6 @@
 		CEC288451C1A75D20012F876 /* TaskTen.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC288391C1A75D20012F876 /* TaskTen.m */; };
 		CEC288461C1A75D20012F876 /* TaskThree.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2883B1C1A75D20012F876 /* TaskThree.m */; };
 		CEC288471C1A75D20012F876 /* TaskTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2883D1C1A75D20012F876 /* TaskTwo.m */; };
-		CEC2884C1C1A75DD0012F876 /* FlowerProcessDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC288491C1A75DD0012F876 /* FlowerProcessDelegate.m */; };
-		CEC2884D1C1A75DD0012F876 /* FlowerTester.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2884B1C1A75DD0012F876 /* FlowerTester.m */; };
 		CEC288581C1ABA670012F876 /* ProcessOne.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC288551C1ABA670012F876 /* ProcessOne.m */; };
 		CEC288591C1ABA670012F876 /* ProcessTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC288571C1ABA670012F876 /* ProcessTwo.m */; };
 		CEC2885E1C1ABA740012F876 /* ProcessOneSeed.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2885B1C1ABA740012F876 /* ProcessOneSeed.m */; };
@@ -78,6 +88,18 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8E9A6A39BD89F8388D7AD2C4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CCE2569C854BCE7EB5AB6A78 /* Flower.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Flower.podspec; path = ../Flower.podspec; sourceTree = "<group>"; };
+		CE47B4581C1D377D00E2C738 /* TestProcessOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestProcessOne.h; sourceTree = "<group>"; };
+		CE47B4591C1D377D00E2C738 /* TestProcessOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestProcessOne.m; sourceTree = "<group>"; };
+		CE47B45D1C1D37AB00E2C738 /* TestTaskOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTaskOne.h; sourceTree = "<group>"; };
+		CE47B45E1C1D37AB00E2C738 /* TestTaskOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTaskOne.m; sourceTree = "<group>"; };
+		CE47B4621C1D37BF00E2C738 /* TestTaskTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTaskTwo.h; sourceTree = "<group>"; };
+		CE47B4631C1D37BF00E2C738 /* TestTaskTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTaskTwo.m; sourceTree = "<group>"; };
+		CE47B4671C1D381400E2C738 /* TestSeedOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSeedOne.h; sourceTree = "<group>"; };
+		CE47B4681C1D381400E2C738 /* TestSeedOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSeedOne.m; sourceTree = "<group>"; };
+		CE47B46C1C1D39CD00E2C738 /* TestDataSeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDataSeed.h; sourceTree = "<group>"; };
+		CE47B46D1C1D39CD00E2C738 /* TestDataSeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDataSeed.m; sourceTree = "<group>"; };
+		CE47B4701C1D47C800E2C738 /* FlowerProcessListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowerProcessListener.h; sourceTree = "<group>"; };
+		CE47B4711C1D47C800E2C738 /* FlowerProcessListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowerProcessListener.m; sourceTree = "<group>"; };
 		CE644C557FD58389B5CFD773 /* Pods-Flower_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flower_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flower_Tests/Pods-Flower_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CEC2882A1C1A75D20012F876 /* TaskEight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskEight.h; sourceTree = "<group>"; };
 		CEC2882B1C1A75D20012F876 /* TaskEight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskEight.m; sourceTree = "<group>"; };
@@ -99,10 +121,6 @@
 		CEC2883B1C1A75D20012F876 /* TaskThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskThree.m; sourceTree = "<group>"; };
 		CEC2883C1C1A75D20012F876 /* TaskTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTwo.h; sourceTree = "<group>"; };
 		CEC2883D1C1A75D20012F876 /* TaskTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTwo.m; sourceTree = "<group>"; };
-		CEC288481C1A75DD0012F876 /* FlowerProcessDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowerProcessDelegate.h; sourceTree = "<group>"; };
-		CEC288491C1A75DD0012F876 /* FlowerProcessDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowerProcessDelegate.m; sourceTree = "<group>"; };
-		CEC2884A1C1A75DD0012F876 /* FlowerTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowerTester.h; sourceTree = "<group>"; };
-		CEC2884B1C1A75DD0012F876 /* FlowerTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowerTester.m; sourceTree = "<group>"; };
 		CEC288541C1ABA670012F876 /* ProcessOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessOne.h; sourceTree = "<group>"; };
 		CEC288551C1ABA670012F876 /* ProcessOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessOne.m; sourceTree = "<group>"; };
 		CEC288561C1ABA670012F876 /* ProcessTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessTwo.h; sourceTree = "<group>"; };
@@ -192,10 +210,8 @@
 				CEC288531C1ABA550012F876 /* Seeds */,
 				CEC288521C1ABA4F0012F876 /* Processes */,
 				CEC288291C1A75BB0012F876 /* Tasks */,
-				CEC288481C1A75DD0012F876 /* FlowerProcessDelegate.h */,
-				CEC288491C1A75DD0012F876 /* FlowerProcessDelegate.m */,
-				CEC2884A1C1A75DD0012F876 /* FlowerTester.h */,
-				CEC2884B1C1A75DD0012F876 /* FlowerTester.m */,
+				CE47B4701C1D47C800E2C738 /* FlowerProcessListener.h */,
+				CE47B4711C1D47C800E2C738 /* FlowerProcessListener.m */,
 				6003F59C195388D20070C39A /* FlowerAppDelegate.h */,
 				6003F59D195388D20070C39A /* FlowerAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -222,6 +238,9 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				CE47B4661C1D37FE00E2C738 /* Seeds */,
+				CE47B45C1C1D379300E2C738 /* Tasks */,
+				CE47B4571C1D35BF00E2C738 /* Processes */,
 				6003F5BB195388D20070C39A /* Tests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
@@ -246,6 +265,37 @@
 				6EFB8C3BC378AF3B49078FCC /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		CE47B4571C1D35BF00E2C738 /* Processes */ = {
+			isa = PBXGroup;
+			children = (
+				CE47B4581C1D377D00E2C738 /* TestProcessOne.h */,
+				CE47B4591C1D377D00E2C738 /* TestProcessOne.m */,
+			);
+			name = Processes;
+			sourceTree = "<group>";
+		};
+		CE47B45C1C1D379300E2C738 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				CE47B45D1C1D37AB00E2C738 /* TestTaskOne.h */,
+				CE47B45E1C1D37AB00E2C738 /* TestTaskOne.m */,
+				CE47B4621C1D37BF00E2C738 /* TestTaskTwo.h */,
+				CE47B4631C1D37BF00E2C738 /* TestTaskTwo.m */,
+			);
+			name = Tasks;
+			sourceTree = "<group>";
+		};
+		CE47B4661C1D37FE00E2C738 /* Seeds */ = {
+			isa = PBXGroup;
+			children = (
+				CE47B4671C1D381400E2C738 /* TestSeedOne.h */,
+				CE47B4681C1D381400E2C738 /* TestSeedOne.m */,
+				CE47B46C1C1D39CD00E2C738 /* TestDataSeed.h */,
+				CE47B46D1C1D39CD00E2C738 /* TestDataSeed.m */,
+			);
+			name = Seeds;
 			sourceTree = "<group>";
 		};
 		CEC288291C1A75BB0012F876 /* Tasks */ = {
@@ -495,12 +545,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* FlowerAppDelegate.m in Sources */,
-				CEC2884C1C1A75DD0012F876 /* FlowerProcessDelegate.m in Sources */,
+				CE47B45F1C1D37AB00E2C738 /* TestTaskOne.m in Sources */,
 				CEC2885F1C1ABA740012F876 /* ProcessTwoSeed.m in Sources */,
 				CEC288591C1ABA670012F876 /* ProcessTwo.m in Sources */,
+				CE47B4641C1D37BF00E2C738 /* TestTaskTwo.m in Sources */,
+				CE47B4721C1D47C800E2C738 /* FlowerProcessListener.m in Sources */,
+				CE47B46E1C1D39CD00E2C738 /* TestDataSeed.m in Sources */,
 				CEC288421C1A75D20012F876 /* TaskOne.m in Sources */,
 				CEC288431C1A75D20012F876 /* TaskSeven.m in Sources */,
-				CEC2884D1C1A75DD0012F876 /* FlowerTester.m in Sources */,
 				CEC288441C1A75D20012F876 /* TaskSix.m in Sources */,
 				6003F5A7195388D20070C39A /* FlowerViewController.m in Sources */,
 				CEC288461C1A75D20012F876 /* TaskThree.m in Sources */,
@@ -508,9 +560,11 @@
 				CEC288581C1ABA670012F876 /* ProcessOne.m in Sources */,
 				CEC288411C1A75D20012F876 /* TaskNine.m in Sources */,
 				CEC288401C1A75D20012F876 /* TaskFour.m in Sources */,
+				CE47B4691C1D381400E2C738 /* TestSeedOne.m in Sources */,
 				CEC2883F1C1A75D20012F876 /* TaskFive.m in Sources */,
 				CEC288451C1A75D20012F876 /* TaskTen.m in Sources */,
 				CEC2883E1C1A75D20012F876 /* TaskEight.m in Sources */,
+				CE47B45A1C1D377D00E2C738 /* TestProcessOne.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				CEC288471C1A75D20012F876 /* TaskTwo.m in Sources */,
 			);
@@ -520,7 +574,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE47B46A1C1D381400E2C738 /* TestSeedOne.m in Sources */,
+				CE47B45B1C1D377D00E2C738 /* TestProcessOne.m in Sources */,
+				CE47B4651C1D37BF00E2C738 /* TestTaskTwo.m in Sources */,
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				CE47B46F1C1D39CD00E2C738 /* TestDataSeed.m in Sources */,
+				CE47B4731C1D47C800E2C738 /* FlowerProcessListener.m in Sources */,
+				CE47B4601C1D37AB00E2C738 /* TestTaskOne.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
