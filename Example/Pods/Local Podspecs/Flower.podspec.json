@@ -1,6 +1,6 @@
 {
   "name": "Flower",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "A workflow engine for iOS that runs parrallel tasks based processes.",
   "description": "This CocoaPod provides the ability to orchestrate a complex structure of tasks into a runnable process.\nIt allows a process to complete even when app goes to the background, if needed",
   "homepage": "https://github.com/vodio-labs/flower-ios",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/vodio-labs/flower-ios.git",
-    "tag": "0.1.0"
+    "tag": "0.2.0"
   },
   "platforms": {
     "ios": "7.0"
