@@ -1,23 +1,37 @@
+// Flower.m
+// Copyright © 2015 Vodio Labs Ltd. (http://www.vod.io)
 //
-//  Flower.m
-//  Crave_IOS
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
-//  Created by Nir Ninio on 06/11/2015.
-//  Copyright © 2015 Vodio Labs Ltd. All rights reserved.
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
 //
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+
 
 #import "Flower.h"
 
 @interface Flower ()
 
-@property (nonatomic, strong) NSMutableDictionary* processes;
-@property (nonatomic, strong) NSMutableDictionary* processDelegates;
+@property (nonatomic, strong) NSMutableDictionary* processes; // currently managed processes
+@property (nonatomic, strong) NSMutableDictionary* processDelegates; // processes delegates
 
 @end
 
 @implementation Flower
 
--(instancetype) initFlower {
+-(instancetype) init {
     if (self = [super init]) {
         _processes = [NSMutableDictionary dictionary];
         _processDelegates = [NSMutableDictionary dictionary];
@@ -29,7 +43,7 @@
     static Flower* flower;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        flower = [[[self class] alloc] initFlower];
+        flower = [[[self class] alloc] init];
     });
     return flower;
 }
@@ -51,6 +65,7 @@
 -(NSString*) executeProcess:(FlowerProcess*)process notify:(id<FlowerDelegate>)delegate {
     if (delegate && process && process.state == PROCESS_CREATED) {
         
+        // in case this process needs to be able to complete in the background
         if (process.completesInBackground && process.backgroundIdentifier == UIBackgroundTaskInvalid) {
             
             // tell iOS that we need extra time in case the app moves to the background

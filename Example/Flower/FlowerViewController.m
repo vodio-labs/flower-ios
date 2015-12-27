@@ -7,37 +7,122 @@
 //
 
 #import "FlowerViewController.h"
+#import <Flower/Flower.h>
+#import "ICapitalService.h"
+#import "PopulationSeed.h"
+#import "PopulationProcess.h"
 
-#import "ProcessOne.h"
-#import "ProcessTwo.h"
+#define CapitalCityUrl          @"https://restcountries.eu/rest/v1/capital/%@"
+#define CountriesByRegionUrl    @"https://restcountries.eu/rest/v1/region/%@"
 
-#import "ProcessOneSeed.h"
-#import "ProcessTwoSeed.h"
+@interface FlowerViewController () <FlowerDelegate, ICapitalService>
 
-#import "FlowerProcessListener.h"
-
-@interface FlowerViewController ()
+@property (nonatomic, strong) UIProgressView* progressView;
+@property (nonatomic, strong) UITextView* textView;
 
 @end
 
+
 @implementation FlowerViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
+    
     [super viewDidLoad];
     
-    ProcessOne* proc1 = [[ProcessOne alloc] initWithSeed:[[ProcessOneSeed alloc] init]];
-    FlowerProcessListener* del1 = [[FlowerProcessListener alloc] initWithProcessId:proc1.identifier];
-    [[Flower flower] executeProcess:proc1 notify:del1];
+    self.view.backgroundColor = [UIColor blackColor];
     
-    ProcessTwo* proc2 = [[ProcessTwo alloc] initWithSeed:[[ProcessTwoSeed alloc] init]];
-    FlowerProcessListener* del2 = [[FlowerProcessListener alloc] initWithProcessId:proc2.identifier];
-    [[Flower flower] executeProcess:proc2 notify:del2];
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    _progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(20, 40, screenWidth-40, 10)];
+    _progressView.progress = 0.0;
+    _progressView.progressTintColor = [UIColor greenColor];
+    
+    [self.view addSubview:_progressView];
+    
+    _textView = [[UITextView alloc] initWithFrame:CGRectMake(20, 40+_progressView.frame.size.height,
+                                                             screenWidth-40, screenHeight-60-_progressView.frame.size.height)];
+    _textView.textAlignment = NSTextAlignmentLeft;
+    _textView.textColor = [UIColor whiteColor];
+    _textView.backgroundColor = [UIColor clearColor];
+    _textView.text = @"";
+    
+    [self.view addSubview:_textView];
+    [self fetchCapitals:@"africa"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) fetchCapitals:(NSString*)region {
+    if (region) {
+        NSString* url = [NSString stringWithFormat:CountriesByRegionUrl, region];
+        NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+        
+        NSMutableArray* cities = [NSMutableArray array];
+        NSError* error;
+        
+        NSArray* json =
+        [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        
+        if (!error) {
+            for (NSDictionary* country in json) {
+                if (country && [country objectForKey:@"capital"]) {
+                    [cities addObject:country[@"capital"]];
+//                    if ([cities count] > 20) {
+//                        break;
+//                    }
+                }
+            }
+        }
+        
+        if ([cities count] > 0) {
+            PopulationProcess* pprocess = [[PopulationProcess alloc] initWithCapitalCities:cities andService:self];
+            self.progressView.progress = 0.0;
+            self.textView.text = @"";
+            [[Flower flower] executeProcess:pprocess notify:self];
+        }
+        else {
+            self.textView.text = @"no cities found";
+        }
+    }
+}
+
+#pragma mark - FlowerDelegate
+
+-(void) process:(FlowerProcess*)process finishedWithSeed:(FlowerSeed*)seed {
+    self.progressView.progress = 1.0;
+    if (seed && [seed isKindOfClass:[PopulationSeed class]]) {
+        PopulationSeed* pseed = (PopulationSeed*)seed;
+        self.textView.text = [pseed.cities componentsJoinedByString:@"\n"];
+    }
+}
+
+-(void) process:(FlowerProcess*)process failedWithError:(NSError*)error {
+    self.progressView.progress = 1.0;
+    self.textView.text = [error localizedDescription];
+}
+
+-(void) process:(FlowerProcess*)process startedWithTaskCount:(NSInteger)tasksCount {
+    self.textView.text = [NSString stringWithFormat:@"started with : %ld tasks", (long)tasksCount];
+}
+
+-(void) process:(FlowerProcess*)process progressChanged:(CGFloat)progress {
+    NSLog(@"progress changed: %f", progress);
+    self.progressView.progress = progress;
+}
+
+#pragma mark - ICapitalService
+
+-(NSString *)urlForCity:(NSString *)city {
+    return city ? [NSString stringWithFormat:CapitalCityUrl, city] : nil;
+}
+
+-(CGFloat) population:(NSInteger)population inArea:(NSInteger)area {
+    return area > 0 ? population / area : 1;
 }
 
 @end

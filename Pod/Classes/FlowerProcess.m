@@ -1,23 +1,37 @@
+// FlowerProcess.m
+// Copyright © 2015 Vodio Labs Ltd. (http://www.vod.io)
 //
-//  FlowerProcess.m
-//  Crave_IOS
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
-//  Created by Nir Ninio on 06/11/2015.
-//  Copyright © 2015 Vodio Labs Ltd. All rights reserved.
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
 //
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+
 
 #import "FlowerProcess.h"
 #import "FlowerError.h"
 #import "LoadingView.h"
 
 
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ //
-// @@@@@@@@ DISPATCHER PRIVATE IMPLEMENTATION @@@@@@@@@@@@@@ //
+// ========================================================= //
+// ======== DISPATCHER PRIVATE IMPLEMENTATION ============== //
 
 @interface FlowerDispatcherTask : FlowerTask
 
 @property (nonatomic, strong, readonly) dispatch_group_t dispatchGroup;
-@property (nonatomic, strong) NSMutableArray* siblings; // parallel tasks we run from this one
+@property (nonatomic, strong) NSMutableArray* siblings; // parallel tasks we run from this dispatcher
 
 @end
 
@@ -81,12 +95,13 @@
 
 @end
 
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ //
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ //
+// ========================================================= //
+// ========================================================= //
 
 
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ //
-// @@@@@@@@@ TASK METADATA PROVATEIMPLEMENTATION @@@@@@@@@@@ //
+
+// ========================================================= //
+// ========= TASK METADATA PRIVATE IMPLEMENTATION ========== //
 
 @interface FlowerTaskMetadata : NSObject
 
@@ -120,8 +135,8 @@
 @end
 
 
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ //
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ //
+// ========================================================= //
+// ========================================================= //
 
 
 @interface FlowerProcess ()
@@ -130,6 +145,7 @@
 @property (nonatomic, strong) dispatch_queue_t concurrentProgressQueue;
 
 @end
+
 
 @implementation FlowerProcess
 
@@ -265,7 +281,7 @@
             }
             
             if (self.blocking) {
-                [[LoadingView instance] startLoading:YES]; // need to remove dependancy
+                [[LoadingView instance] startLoading:YES];
             }
             
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
@@ -380,7 +396,11 @@
 
 // overriden by CraveBaseProcess to return crave context process
 -(FlowerProcess*) processOf:(Class)processClass withSeed:(FlowerSeed*)seed {
-    return [[processClass alloc] initWithSeed:seed];
+    // cannot return process of the same as the one building it - endless loop.
+    if (processClass && processClass != [self class]) {
+        return [[processClass alloc] initWithSeed:seed];
+    }
+    return nil;
 }
 
 -(FlowerTask*) addTask:(FlowerTask*)task andMetadata:(FlowerTaskMetadata*)metadata {
@@ -561,11 +581,11 @@
         if (metadata) {
             
             [self addToProgress:(progress * metadata.progressVolume)];
-            
-            if (self.delegate &&
-                [self.delegate respondsToSelector:@selector(process:progressChanged:)]) {
-                [self.delegate process:self.identifier progressChanged:self.progress];
-            }
+            [self notifyProgressChanged:self.progress];
+//            if (self.delegate &&
+//                [self.delegate respondsToSelector:@selector(process:progressChanged:)]) {
+//                [self.delegate process:self.identifier progressChanged:self.progress];
+//            }
         }
     }
 }
