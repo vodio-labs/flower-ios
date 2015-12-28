@@ -141,7 +141,7 @@
 
 @interface FlowerProcess ()
 
-@property (nonatomic) id<FlowerProcessDelegate> delegate;
+@property (nonatomic, weak) id<FlowerProcessDelegate> delegate;
 @property (nonatomic, strong) dispatch_queue_t concurrentProgressQueue;
 
 @end

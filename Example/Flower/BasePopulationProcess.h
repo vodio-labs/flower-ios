@@ -12,7 +12,7 @@
 
 @interface BasePopulationProcess : FlowerProcess
 
-@property (nonatomic) id<ICapitalService> service;
+@property (nonatomic, weak) id<ICapitalService> service;
 
 -(instancetype) initWithSeed:(FlowerSeed*)seed andService:(id<ICapitalService>)service;
 

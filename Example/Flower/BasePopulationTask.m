@@ -10,7 +10,7 @@
 
 @interface BasePopulationTask ()
 
-@property (nonatomic) id<ICapitalService> service;
+@property (nonatomic, weak) id<ICapitalService> service;
 
 @end
 
