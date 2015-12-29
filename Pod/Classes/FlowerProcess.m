@@ -66,6 +66,7 @@
     for (FlowerTask* task in self.siblings) {
         [task cancel];
     }
+    [super cancel];
 }
 
 -(void)setDelegate:(id<FlowerTaskDelegate>)delegate {
@@ -299,7 +300,10 @@
 }
 
 -(void) cancel {
-    self.state = PROCESS_CANCELLED;
+    if (self.state != PROCESS_CANCELLED) {
+        self.state = PROCESS_CANCELLED;
+        [self notifyProcessCancelledWithError:nil];
+    }
 }
 
 -(void) executeNextTask:(FlowerTask*)task {
@@ -334,12 +338,16 @@
     }
     
     else if (self.state == PROCESS_CANCELLED) {
-        // clean up
+        // clean up - no moving forward from here
         if (task) {
-            while (task.next) {
-                [task cancel];
-                task = task.next;
-            }
+            
+            [task cancel];
+            
+            if (task.dispatcher) {
+                // need to signal on group leaving, so that the dispatcher will finish executing as well
+                FlowerDispatcherTask* dispatcher = (FlowerDispatcherTask*)task.dispatcher;
+                dispatch_group_leave(dispatcher.dispatchGroup);
+            }            
         }
     }
     else {
@@ -578,14 +586,9 @@
 -(void) task:(FlowerTask*)task progressChanged:(CGFloat)progress {
     if (task) {
         FlowerTaskMetadata* metadata = [self.tasksMetadata objectForKey:task.taskId];
-        if (metadata) {
-            
+        if (metadata) {            
             [self addToProgress:(progress * metadata.progressVolume)];
             [self notifyProgressChanged:self.progress];
-//            if (self.delegate &&
-//                [self.delegate respondsToSelector:@selector(process:progressChanged:)]) {
-//                [self.delegate process:self.identifier progressChanged:self.progress];
-//            }
         }
     }
 }

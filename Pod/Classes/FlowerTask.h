@@ -156,6 +156,7 @@
  * @name Cancelling a running task.
  * -----------------------------------------------------------------------------
  *
+ * @warning A Task must call its super cancel after implementing its own cancel logic
  */
 -(void) cancel;
 

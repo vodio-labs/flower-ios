@@ -97,8 +97,11 @@
 }
 
 // can override to do something when cancelled
--(void) cancel { }
-
+-(void) cancel {
+    if (self.next) {
+        [self.next cancel];
+    }
+}
 
 // override with actual work - or get an error for not existing ...
 -(void) doWork {
