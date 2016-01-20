@@ -503,24 +503,21 @@
 
 // creates a set of tasks, adds the tasks metadata but NOT adding them to the main process route
 -(FlowerTask*) parallelProcessOf:(Class)processClass withSeed:(FlowerSeed*)seed progressVolume:(CGFloat)volume {
-
+    
     FlowerProcess* process = [self processOf:processClass withSeed:seed];
-
+    
     if (process && process.root) {
         
         process.root.delegate = self; // this will pass through all tree
         
-        FlowerTask* current = process.root;
-        
-        // loop on all tasks update volume and add to main process route
-        while (current) {
-            FlowerTaskMetadata* metadata = [process.tasksMetadata objectForKey:current.taskId];
-            if (!metadata) {
-                NSLog(@"metadata for: %@ is nil", current.taskId);
+        // update all metadata objects
+        for (NSString* key in process.tasksMetadata) {
+            FlowerTaskMetadata* md = (FlowerTaskMetadata*)process.tasksMetadata[key];
+            if (md) {
+                md.progressVolume *= volume;
             }
-            metadata.progressVolume *= volume;
-            current = current.next;
         }
+        
         [self.tasksMetadata addEntriesFromDictionary:process.tasksMetadata];
     }
     return process.root; // here we return a pointer to the root node
