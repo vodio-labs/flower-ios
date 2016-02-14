@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
 s.description      = <<-DESC
-                    This CocoaPod provides the ability to orchestrate a complex structure of tasks into a runnable process.
+                    This Pod provides the ability to orchestrate a complex structure of tasks into a runnable process.
                     It allows a process to complete even when app goes to the background, if needed
                     DESC
 
