@@ -57,7 +57,6 @@
 }
 
 -(void) doWork {
-
     // wait for all async tasks (siblings) to complete before returning
     dispatch_group_notify(self.dispatchGroup, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         [self taskFinishedWithError:self.innerError];
