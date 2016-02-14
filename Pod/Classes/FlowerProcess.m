@@ -229,7 +229,7 @@
         NSLog(@"%@", [self structureNode:self.root inStructure:[NSMutableString string]]);
     }
     else {
-       NSLog(@"process: [%@] no tasks", [self class]);
+        NSLog(@"process: [%@] no tasks", [self class]);
     }
     NSLog(@"metadata: %@", self.tasksMetadata);
 }
@@ -264,7 +264,7 @@
         self.state = PROCESS_RUNNING;
         
         FlowerError* error = nil;
-
+        
         if (!self.root) {
             error = [FlowerError errorWithCode:FlowerErrorInvalidData andMessage:kFlowerErrorRootNodeNotFound];
         }
@@ -347,13 +347,13 @@
                 // need to signal on group leaving, so that the dispatcher will finish executing as well
                 FlowerDispatcherTask* dispatcher = (FlowerDispatcherTask*)task.dispatcher;
                 dispatch_group_leave(dispatcher.dispatchGroup);
-            }            
+            }
         }
     }
     else {
         [self completedWithError:[FlowerError errorWithCode:FlowerErrorProcessStateNotValid
                                                  andMessage:kFlowerErrorProcessNotRunningOrCancelled]];
-
+        
     }
 }
 
@@ -436,7 +436,7 @@
 // adds a new serial task to the main process route
 -(FlowerTask*) addTaskOf:(Class)taskClass withSeed:(FlowerSeed*)seed progressVolume:(CGFloat)volume {
     return [self addTask:[self taskOf:taskClass]
-            andMetadata:[[FlowerTaskMetadata alloc] initWithSeed:seed andProgressVolume:volume]];
+             andMetadata:[[FlowerTaskMetadata alloc] initWithSeed:seed andProgressVolume:volume]];
 }
 
 // adds a set of new serial tasks (the process set) to the main process route
@@ -571,7 +571,7 @@
             }
             else {
                 [self completedWithError:[FlowerError errorWithCode:FlowerErrorInvalidData
-                                          andMessage:kFlowerErrorTaskNotFound]];
+                                                         andMessage:kFlowerErrorTaskNotFound]];
             }
         }
         else {
@@ -583,7 +583,7 @@
 -(void) task:(FlowerTask*)task progressChanged:(CGFloat)progress {
     if (task) {
         FlowerTaskMetadata* metadata = [self.tasksMetadata objectForKey:task.taskId];
-        if (metadata) {            
+        if (metadata) {
             [self addToProgress:(progress * metadata.progressVolume)];
             [self notifyProgressChanged:self.progress];
         }
