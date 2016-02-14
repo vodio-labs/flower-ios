@@ -1,2 +1,2 @@
 # flower-ios
-Flower engine for iOS (cocoapod)
+Flower workflow engine for iOS (cocoapod)
