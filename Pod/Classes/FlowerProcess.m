@@ -33,6 +33,8 @@
 @property (nonatomic, strong, readonly) dispatch_group_t dispatchGroup;
 @property (nonatomic, strong) NSMutableArray* siblings; // parallel tasks we run from this dispatcher
 
+@property (nonatomic, strong) NSError* innerError;
+
 @end
 
 
@@ -46,19 +48,18 @@
     return self;
 }
 
+-(void) setInnerError:(NSError*)innerError {
+    // don't go back to nil if already found error
+    if (_innerError == nil) {
+        _innerError = innerError;
+    }
+}
+
 -(void) doWork {
 
     // wait for all async tasks (siblings) to complete before returning
     dispatch_group_notify(self.dispatchGroup, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        
-        NSError* error = nil;
-        for (FlowerTask* task in self.siblings) {
-            if (task.error) {
-                error = task.error;
-                break;
-            }
-        }
-        [self taskFinishedWithError:error];        
+        [self taskFinishedWithError:self.innerError];
     });
 }
 
@@ -539,6 +540,7 @@
         // if this is the last task - notify the dispatcher
         if (task.next == nil) {
             FlowerDispatcherTask* dispatcher = (FlowerDispatcherTask*)task.dispatcher;
+            dispatcher.innerError = task.error;
             dispatch_group_leave(dispatcher.dispatchGroup);
         }
         else {
@@ -549,6 +551,7 @@
             else {
                 // in case we have error - just report back to the dispatcher, no need to move to next task
                 FlowerDispatcherTask* dispatcher = (FlowerDispatcherTask*)task.dispatcher;
+                dispatcher.innerError = task.error;
                 dispatch_group_leave(dispatcher.dispatchGroup);
             }
         }
