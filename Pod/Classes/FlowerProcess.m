@@ -398,12 +398,10 @@
 
 #pragma mark - build tasks list
 
-// overriden by CraveBaseProcess to return crave context process
 -(FlowerTask*) taskOf:(Class)taskClass {
     return [[taskClass alloc] initWithDelegate:self];
 }
 
-// overriden by CraveBaseProcess to return crave context process
 -(FlowerProcess*) processOf:(Class)processClass withSeed:(FlowerSeed*)seed {
     // cannot return process of the same as the one building it - endless loop.
     if (processClass && processClass != [self class]) {

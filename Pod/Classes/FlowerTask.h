@@ -79,7 +79,7 @@
 /**
  The delegate of this task, will be receiving notifications on tasks state changes.
  */
-@property (nonatomic) id<FlowerTaskDelegate> delegate;
+@property (nonatomic, weak) id<FlowerTaskDelegate> delegate;
 
 
 /**
