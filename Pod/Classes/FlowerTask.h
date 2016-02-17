@@ -109,7 +109,7 @@
 /**
  The task which dispatched this task (parallel), if such exists.
  */
-@property (nonatomic, strong) FlowerTask* dispatcher;
+@property (nonatomic, weak) FlowerTask* dispatcher;
 
 
 /**-----------------------------------------------------------------------------

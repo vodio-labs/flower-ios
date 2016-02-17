@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Flower"
-  s.version          = "0.9.0"
+  s.version          = "1.0.0"
   s.summary          = "A workflow engine for iOS that runs parrallel tasks based processes."
 
 # This description is used to generate tags and improve search results.
